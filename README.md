@@ -28,25 +28,46 @@ Project Website: [https://hojae-io.github.io/LearningHumanoidArmMotion-RAL2025-W
   </ol>
 </details>
 
-### Installation ###
-1. Set up the git submodules
+## Getting Started
+
+### Installation
+
+1. Git clone the repository.
+2. Set up the git submodules.
    ```bash
    git submodule init
    git submodule update
    ```
-   This should set up [IssacLab](https://github.com/hojae-io/IsaacLab), [cusadi](https://github.com/hojae-io/cusadi), [rsl_rl](https://github.com/hojae-io/rsl_rl) submodules (branch: dev_RAL2025)
+   This should set up [IssacLab](https://github.com/hojae-io/IsaacLab), [cusadi](https://github.com/hojae-io/cusadi), [rsl_rl](https://github.com/hojae-io/rsl_rl) submodules (branch: dev_RAL2025).
+
+3. Go to the [IssacLab](https://github.com/hojae-io/IsaacLab) directory. <br/>
+   Follow the [instruction](https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/pip_installation.html) to install _IsaacSim_ and _IsaacLab_ anaconda virtual environment. <br/>
+    > :bulb: **Note** <br/>
+    > You _must_ use the customized [IssacLab](https://github.com/hojae-io/IsaacLab), not the official version. <br/>
+    > IsaacSim version: 4.5.0
+    
+4. Go to the [rsl_rl](https://github.com/hojae-io/rsl_rl) directory. <br/>
+   Check if _rsl_rl_ is already installed during IsaacLab installation by running `pip show rsl_rl`; if so, uninstall it by running `pip uninstall rsl_rl`. <br/>
+   Run the following command to install customized [rsl_rl](https://github.com/hojae-io/rsl_rl).
+    ```bash
+    cd rsl_rl
+    pip install -e .
+    ```
 
 ---
-### System Info ###
+### System Info
+
 Operating System: Ubuntu 22.04 / Ubuntu 24.04 <br/>
 GPU: Geforce 3090 / Geforce 4070 Ti
 
 ---
-### Troubleshooting ###
+### Troubleshooting
+
 1. TODO
 
 ---
-### Acknowledgement ###
+### Acknowledgement
+
 We would appreciate it if you would cite it in academic publications:
 ```
 @article{lee2025learning,
