@@ -1,0 +1,13 @@
+[submodule "IsaacLab"]
+	path = IsaacLab
+	url = git@github.com:hojae-io/IsaacLab.git
+	branch = dev_RAL2025
+[submodule "rsl_rl"]
+	path = rsl_rl
+	url = git@github.com:hojae-io/rsl_rl.git
+	branch = dev_RAL2025
+[submodule "cusadi"]
+	path = cusadi
+	url = git@github.com:hojae-io/cusadi.git
+	branch = dev_RAL2025
+

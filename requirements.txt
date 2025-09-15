@@ -1,0 +1,6 @@
+casadi==3.6.7
+optuna==4.3.0
+optuna-dashboard==0.18.0
+wandb==0.12.21
+pin==3.7.0
+numpy==1.23.0
