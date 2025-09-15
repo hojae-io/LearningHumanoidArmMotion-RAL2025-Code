@@ -141,7 +141,7 @@ GPU: Geforce 3090 / Geforce 4070 Ti
 
 ## Troubleshooting
 
-1. TODO
+1. If you have any issue with `numpy` version conflict, consider downgrading to version 1.23.1 by `pip install numpy==1.23.1`
 
 
 ## Acknowledgement
