@@ -43,12 +43,21 @@ Project Website: [https://hojae-io.github.io/LearningHumanoidArmMotion-RAL2025-W
    git submodule init
    git submodule update
    ```
-   This should set up [IssacLab](https://github.com/hojae-io/IsaacLab), [cusadi](https://github.com/hojae-io/cusadi), [rsl_rl](https://github.com/hojae-io/rsl_rl) submodules (branch: dev_RAL2025).
+   This should set up [IsaacLab](https://github.com/hojae-io/IsaacLab), [cusadi](https://github.com/hojae-io/cusadi), [rsl_rl](https://github.com/hojae-io/rsl_rl) submodules (branch: dev_RAL2025).
 
-3. Go to the [IssacLab](https://github.com/hojae-io/IsaacLab) directory. <br/>
+3. Go to the [IsaacLab](https://github.com/hojae-io/IsaacLab) directory. <br/>
    Follow the [instruction](https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/pip_installation.html) to install _IsaacSim_ and _IsaacLab_ anaconda virtual environment. <br/>
+   ```bash
+   cd IsaacLab
+   conda create -n ral2025 python=3.10
+   conda activate ral2025
+   pip install torch==2.5.1+cu121 torchvision==0.20.1+cu121 torchaudio==2.5.1+cu121 --index-url https://download.pytorch.org/whl/cu121
+   pip install "isaacsim[all,extscache]==4.5.0" --extra-index-url https://pypi.nvidia.com
+   ./isaaclab.sh --install
+   ```
+   
     > :bulb: **Note** <br/>
-    > You _must_ use the customized [IssacLab](https://github.com/hojae-io/IsaacLab), not the official version. <br/>
+    > You _must_ use the customized [IsaacLab](https://github.com/hojae-io/IsaacLab), not the official version. <br/>
     > IsaacSim version: 4.5.0 <br/>
     > Python version: 3.10
     
@@ -61,7 +70,9 @@ Project Website: [https://hojae-io.github.io/LearningHumanoidArmMotion-RAL2025-W
     ```
 
 5. Install required libraries by running `pip install -r requirements.txt` at root directory.
-
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 ### Code Structure
 
