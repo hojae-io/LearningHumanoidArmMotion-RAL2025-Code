@@ -60,6 +60,9 @@ Project Website: [https://hojae-io.github.io/LearningHumanoidArmMotion-RAL2025-W
     pip install -e .
     ```
 
+5. Install required libraries by running `pip install -r requirements.txt` at root directory.
+
+
 ### Code Structure
 
 | Directory      | Description                                                                 |
@@ -77,10 +80,24 @@ Project Website: [https://hojae-io.github.io/LearningHumanoidArmMotion-RAL2025-W
 
 ### 0. Generate CusADi Function (Optional)
 Necessary CusADi functions for running this code are already generated. So you don't need to run this section.
-But if you want to generate custom CusADi function, follow the instructions below.
-```bash
-cd extensions/humanoid/dynamics/forward_kinematics.py
-```
+But if you want to generate custom CusADi functions, follow the instructions below.
+
+1. Install CasADi extension of Pinocchio by following the instruction [here](https://stack-of-tasks.github.io/pinocchio/download.html) or by running `conda install pinocchio -c conda-forge`. <br/>
+   You should be able to run `from pinocchio import casadi as cpin` from the script.
+
+2. Run
+   ```bash
+   python ./extensions/humanoid/dynamics/forward_kinematics.py
+   ```
+   It will generate casadi functions in `extensions/humanoid/dynamics/casadi_fns` directory.
+
+3. Copy manually these casadi functions to `cusadi/src/casadi_functions`
+4. Run
+   ```base
+   cd cusadi
+   python run_codegen.py
+   ```
+   It will generate `*.cu` files in `cusadi/codegen`. Now we are ready to use _CusADi_ functions!
 
 ### 3. Deploy the policy to robot hardware
 This repository does not include a code stack for deploying a policy to MIT Humanoid hardware.
@@ -91,7 +108,7 @@ Then you would get a `*.onnx` file to run on C++ code.
 
 ## System Info
 
-Operating System: Ubuntu 22.04 / Ubuntu 24.04 <br/>
+Operating System: Ubuntu 22.04 <br/>
 GPU: Geforce 3090 / Geforce 4070 Ti
 
 
