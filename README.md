@@ -49,7 +49,7 @@ Project Website: [https://hojae-io.github.io/LearningHumanoidArmMotion-RAL2025-W
    Follow the [instruction](https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/pip_installation.html) to install _IsaacSim_ and _IsaacLab_ anaconda virtual environment. <br/>
     > :bulb: **Note** <br/>
     > You _must_ use the customized [IssacLab](https://github.com/hojae-io/IsaacLab), not the official version. <br/>
-    > IsaacSim version: 4.5.0
+    > IsaacSim version: 4.5.0 <br/>
     > Python version: 3.10
     
 4. Go to the [rsl_rl](https://github.com/hojae-io/rsl_rl) directory. <br/>
