@@ -50,6 +50,7 @@ Project Website: [https://hojae-io.github.io/LearningHumanoidArmMotion-RAL2025-W
     > :bulb: **Note** <br/>
     > You _must_ use the customized [IssacLab](https://github.com/hojae-io/IsaacLab), not the official version. <br/>
     > IsaacSim version: 4.5.0
+    > Python version: 3.10
     
 4. Go to the [rsl_rl](https://github.com/hojae-io/rsl_rl) directory. <br/>
    Check if _rsl_rl_ is already installed during IsaacLab installation by running `pip show rsl_rl`; if so, uninstall it by running `pip uninstall rsl_rl`. <br/>
