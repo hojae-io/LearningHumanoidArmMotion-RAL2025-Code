@@ -12,9 +12,6 @@ Project Website: [https://hojae-io.github.io/LearningHumanoidArmMotion-RAL2025-W
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about">About</a>
-    </li>
-    <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#dependencies">Dependencies</a></li>
@@ -22,7 +19,7 @@ Project Website: [https://hojae-io.github.io/LearningHumanoidArmMotion-RAL2025-W
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#systeminfo">System Info</a></li>
+    <li><a href="#system-info">System Info</a></li>
     <li><a href="#troubleshooting">Troubleshooting</a></li>
     <li><a href="#acknowledgement">Acknowledgement</a></li>
   </ol>
@@ -54,19 +51,47 @@ Project Website: [https://hojae-io.github.io/LearningHumanoidArmMotion-RAL2025-W
     pip install -e .
     ```
 
----
-### System Info
+### Code Structure
+
+| Directory      | Description                                                                 |
+|----------------|-----------------------------------------------------------------------------|
+| `extensions/` | Core algorithms (MIT Humanoid env, CAM computation, etc.)                  |
+| `IsaacLab/`   | RL wrappers (observation, action, reward, termination managers etc.) |
+| `cusadi/`     | GPU parallelization of CasADi functions (pinocchio etc.) |
+| `rsl_rl/`     | RL algorithms (PPO etc.) |
+| `scripts/`    | Entry points (`play_modular.py`, `train_modular.py` etc.)                       |
+| `logs/`       | Saved trained models                                                       |
+| `resources/`  | MIT Humanoid URDF    
+<br/>
+
+## User Manual
+
+### 0. Generate CusADi Function (Optional)
+Necessary CusADi functions for running this code are already generated. So you don't need to run this section.
+But if you want to generate custom CusADi function, follow the instructions below.
+```bash
+cd extensions/humanoid/dynamics/forward_kinematics.py
+```
+
+### 3. Deploy the policy to robot hardware
+This repository does not include a code stack for deploying a policy to MIT Humanoid hardware.
+Please check the [Cheetah-Software](https://github.com/mit-biomimetics/Cheetah-Software) for our lab's hardware code stack.
+
+To deploy the trained policy, you would need to set `EXPORT_POLICY=TRUE` in the `scripts/play_modular.py` script.
+Then you would get a `*.onnx` file to run on C++ code.
+
+## System Info
 
 Operating System: Ubuntu 22.04 / Ubuntu 24.04 <br/>
 GPU: Geforce 3090 / Geforce 4070 Ti
 
----
-### Troubleshooting
+
+## Troubleshooting
 
 1. TODO
 
----
-### Acknowledgement
+
+## Acknowledgement
 
 We would appreciate it if you would cite it in academic publications:
 ```
