@@ -51,9 +51,9 @@ Project Website: [https://hojae-io.github.io/LearningHumanoidArmMotion-RAL2025-W
    cd IsaacLab
    conda create -n ral2025 python=3.10
    conda activate ral2025
-   pip install torch==2.5.1+cu121 torchvision==0.20.1+cu121 torchaudio==2.5.1+cu121 --index-url https://download.pytorch.org/whl/cu121
+   pip install torch==2.7.0 torchvision==0.22.0 --index-url https://download.pytorch.org/whl/cu128
    pip install "isaacsim[all,extscache]==4.5.0" --extra-index-url https://pypi.nvidia.com
-   ./isaaclab.sh --install
+   ./isaaclab.sh --install none
    ```
    
     > :bulb: **Note** <br/>
@@ -69,10 +69,26 @@ Project Website: [https://hojae-io.github.io/LearningHumanoidArmMotion-RAL2025-W
     pip install -e .
     ```
 
-5. Install required libraries by running `pip install -r requirements.txt` at root directory.
+5. Go to the [cusadi](https://github.com/hojae-io/cusadi) directory. <br/>
+    ```bash
+    cd cusadi
+    pip install -e .
+    ```
+
+6. Install required libraries by running `pip install -r requirements.txt` at root directory.
     ```bash
     pip install -r requirements.txt
     ```
+
+> [!IMPORTANT]
+> By now, you should be able to run
+> ```bash
+> pip show isaacsim
+> pip show IsaacLab
+> pip show rsl_rl
+> pip show cusadi
+> ```
+> And all these packages should be located in `$HOME/anaconda3/envs/ral2025/lib/python3.10/site-packages` and their Editable project located in `LearningHumanoidArmMotion-RAL2025-Code/`
 
 ### Code Structure
 
