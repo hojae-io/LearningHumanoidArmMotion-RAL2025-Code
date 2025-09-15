@@ -6,6 +6,14 @@ Paper Link: [https://arxiv.org/pdf/2507.04140](https://arxiv.org/pdf/2507.04140)
 Video Link: [https://youtu.be/BNYML7QZyWQ](https://youtu.be/BNYML7QZyWQ) <br/>
 Project Website: [https://hojae-io.github.io/LearningHumanoidArmMotion-RAL2025-Website](https://hojae-io.github.io/LearningHumanoidArmMotion-RAL2025-Website)
 
+<br/>
+<div align="center">
+  <a href="https://youtu.be/BNYML7QZyWQ">
+    <img src="media/intro.gif" width="60%" 
+         style="border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.3); object-fit:cover;">
+  </a>
+</div>
+<br/>
 
 <!-- TABLE OF CONTENTS -->
 <details open>
