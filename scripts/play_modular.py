@@ -159,7 +159,7 @@ if __name__ == "__main__":
     EXPORT_POLICY = True # True, False
     CUSTOM_COMMANDS = False # True, False
     LIVE_PLOT = False # True, False
-    RECORD = True # True, False
+    RECORD = False # True, False
 
     # args_cli.load_files = True # True, False
     # args_cli.load_run = '2025-05-23_00-34-58'
