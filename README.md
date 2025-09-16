@@ -142,8 +142,13 @@ But if you want to generate custom CusADi functions, follow the instructions bel
 ```bash
 python scripts/train_modular.py --task=humanoid_full_modular --headless --max_iterations=2000
 ```
-The trained models will be saved in `logs/rsl_rl/` directory.
+The trained models will be saved in `logs/rsl_rl/` directory. <br/>
 
+> For the single agent controller, run
+> ```bash
+> python scripts/train.py --task=humanoid_vanilla --headless --max_iterations=2000
+> python scripts/train.py --task=humanoid_full_vanilla --headless --max_iterations=2000
+> ```
 
 ### 2. Play the policy in IsaacLab
 ```bash
@@ -151,7 +156,14 @@ python scripts/play_modular.py --task=humanoid_full_modular_play --num_envs=3 --
 ```
 
 You can control velocity command by `L / H / K / J / U / I` keys. <br/>
-By setting `RECORD=True` in `play_modular.py` and pressing `W` key, you can save recorded videos and plots in `/logs/rsl_rl/[your model]/analysis/` directory.
+By setting `RECORD=True` in `play_modular.py` and pressing `W` key, you can save recorded videos and plots in `/logs/rsl_rl/[YOUR MODEL]/analysis/` directory. <br/>
+By pressing `F` key, you can push the robot (_i.e._ apply external perturbation). <br/>
+
+> For the single agent controller, run
+> ```bash
+> python scripts/play.py --task=humanoid_vanilla_play --headless --max_iterations=2000
+> python scripts/play.py --task=humanoid_full_vanilla_play --headless --max_iterations=2000
+>  ```
 
 ### 3. Deploy the policy to robot hardware
 This repository does not include a code stack for deploying a policy to MIT Humanoid hardware.
