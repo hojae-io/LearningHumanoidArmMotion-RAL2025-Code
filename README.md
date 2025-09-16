@@ -111,6 +111,12 @@ Project Website: [https://hojae-io.github.io/LearningHumanoidArmMotion-RAL2025-W
 
 ## User Manual
 
+Activate anaconda virtual environment:
+```bash 
+conda activate ral2025
+cd LearningHumanoidArmMotion-RAL2025-Code
+```
+
 ### 0. Generate CusADi Function (Optional)
 Necessary CusADi functions for running this code are already generated. So you don't need to run this section.
 But if you want to generate custom CusADi functions, follow the instructions below.
@@ -134,8 +140,6 @@ But if you want to generate custom CusADi functions, follow the instructions bel
 
 ### 1. Train the policy in IsaacLab
 ```bash
-conda activate ral2025
-cd LearningHumanoidArmMotion-RAL2025-Code
 python scripts/train_modular.py --task=humanoid_full_modular --headless --max_iterations=2000
 ```
 The trained models will be saved in `logs/rsl_rl/` directory.
@@ -146,7 +150,7 @@ The trained models will be saved in `logs/rsl_rl/` directory.
 python scripts/play_modular.py --task=humanoid_full_modular_play --num_envs=3 --device cpu
 ```
 
-You can control velocity command by `L / H / K / J / U / I` keys
+You can control velocity command by `L / H / K / J / U / I` keys. <br/>
 By setting `RECORD=True` in `play_modular.py` and pressing `W` key, you can save recorded videos and plots in `/logs/rsl_rl/[your model]/analysis/` directory.
 
 ### 3. Deploy the policy to robot hardware
