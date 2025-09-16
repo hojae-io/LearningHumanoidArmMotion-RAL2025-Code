@@ -29,7 +29,7 @@ Project Website: [https://hojae-io.github.io/LearningHumanoidArmMotion-RAL2025-W
     <li>
       <a href="#user-manual">User Manual</a></li>
       <ul>
-        <li><a href="#0.-generate-cusadi-function-(optional)">0. Generate CusADi Function (Optional)</a></li>
+        <li><a href="#0-generate-cusadi-function-optional">0. Generate CusADi Function (Optional)</a></li>
       </ul>
     <li><a href="#system-info">System Info</a></li>
     <li><a href="#troubleshooting">Troubleshooting</a></li>
