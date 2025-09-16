@@ -30,7 +30,7 @@ Project Website: [https://hojae-io.github.io/LearningHumanoidArmMotion-RAL2025-W
       <a href="#user-manual">User Manual</a></li>
       <ul>
         <li><a href="#0-generate-cusadi-function-optional">Generate CusADi Function (Optional)</a></li>
-        <li><a href="#1-trian-the-policy-in-isaaclab">Train the policy in IsaacLab</a></li>
+        <li><a href="#1-train-the-policy-in-isaaclab">Train the policy in IsaacLab</a></li>
         <li><a href="#2-play-the-policy-in-isaaclab">Play the policy in IsaacLab</a></li>
       </ul>
     <li><a href="#system-info">System Info</a></li>
