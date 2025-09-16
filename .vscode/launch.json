@@ -1,0 +1,152 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "name": "Python: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/.vscode/.python.env",
+        },
+
+        {
+            "name": "Python: [Pendulum] Train Environment",
+            "type": "debugpy",
+            "request": "launch",
+            "args" : ["--task", "pendulum", "--num_envs", "4", "--disable_logging"],
+            "program": "${workspaceFolder}/scripts/train.py",
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/.vscode/.python.env"
+        },
+        {
+            "name": "Python: [Pendulum] Play Environment",
+            "type": "debugpy",
+            "request": "launch",
+            "args" : ["--task", "pendulum_play", "--num_envs", "16", "--cpu"],
+            "program": "${workspaceFolder}/scripts/play.py",
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/.vscode/.python.env"
+        },
+
+        {
+            "name": "Python: [Cartpole] Train Environment",
+            "type": "debugpy",
+            "request": "launch",
+            "args" : ["--task", "cartpole", "--num_envs", "4", "--disable_logging"],
+            "program": "${workspaceFolder}/scripts/train.py",
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/.vscode/.python.env"
+        },
+        {
+            "name": "Python: [Cartpole] Play Environment",
+            "type": "debugpy",
+            "request": "launch",
+            "args" : ["--task", "cartpole_play", "--num_envs", "16", "--cpu"],
+            "program": "${workspaceFolder}/scripts/play.py",
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/.vscode/.python.env"
+        },
+
+        {
+            "name": "Python: [Vanilla] Train Environment",
+            "type": "debugpy",
+            "request": "launch",
+            // "args" : ["--task", "humanoid_vanilla", "--num_envs", "4096", "--headless", "--offscreen_render", "--video"],
+            // "args" : ["--task", "humanoid_vanilla", "--num_envs", "4096", "--headless", "--disable_logging"],
+            // "args" : ["--task", "humanoid_vanilla", "--num_envs", "4", "--disable_logging", "--resume=True"],
+            "args" : ["--task", "humanoid_vanilla", "--num_envs", "4"],
+            // "args" : ["--task", "humanoid_vanilla", "--num_envs", "4", "--disable_logging", "--headless"],
+            "program": "${workspaceFolder}/scripts/train.py",
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/.vscode/.python.env"
+        },
+        {
+            "name": "Python: [Vanilla] Play Environment",
+            "type": "debugpy",
+            "request": "launch",
+            // "args" : ["--task", "humanoid_vanilla_play", "--num_envs", "4", "--cpu"],
+            "args" : ["--task", "humanoid_vanilla_play", "--num_envs", "1", "--device", "cpu"],
+            "program": "${workspaceFolder}/scripts/play.py",
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/.vscode/.python.env"
+        },
+
+        {
+            "name": "Python: [Vanilla_Full] Train Environment",
+            "type": "debugpy",
+            "request": "launch",
+            // "args" : ["--task", "humanoid_full_vanilla", "--num_envs", "4096", "--headless", "--offscreen_render", "--video"],
+            // "args" : ["--task", "humanoid_full_vanilla", "--num_envs", "4096", "--headless", "--disable_logging"],
+            "args" : ["--task", "humanoid_full_vanilla", "--num_envs", "4", "--disable_logging", "--resume=True"],
+            // "args" : ["--task", "humanoid_full_vanilla", "--num_envs", "4", "--disable_logging", "--headless"],
+            "program": "${workspaceFolder}/scripts/train.py",
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/.vscode/.python.env"
+        },
+        {
+            "name": "Python: [Vanilla_Full] Play Environment",
+            "type": "debugpy",
+            "request": "launch",
+            // "args" : ["--task", "humanoid_full_vanilla_play", "--num_envs", "4", "--cpu"],
+            "args" : ["--task", "humanoid_full_vanilla_play", "--num_envs", "1", "--device", "cpu"],
+            "program": "${workspaceFolder}/scripts/play.py",
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/.vscode/.python.env"
+        },
+
+        {
+            "name": "Python: [Modular_Full] Train Environment",
+            "type": "debugpy",
+            "request": "launch",
+            // "args" : ["--task", "humanoid_full_modular", "--num_envs", "4096", "--headless", "--offscreen_render", "--video"],
+            // "args" : ["--task", "humanoid_full_modular", "--num_envs", "4", "--disable_logging", "--device", "cpu", "--resume=True"],
+            "args" : ["--task", "humanoid_full_modular", "--num_envs", "4", "--disable_logging", "--device", "cpu", "--headless"],
+            // "args" : ["--task", "humanoid_full_modular", "--num_envs", "4", "--disable_logging", "--device", "cpu"],
+            // "args" : ["--task", "humanoid_full_modular", "--num_envs", "4", "--device", "cpu", "--experiment_name", "Humanoid_Full_Modular_DecCritic_DecActor"],
+            "program": "${workspaceFolder}/scripts/train_modular.py",
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/.vscode/.python.env"
+        },
+        {
+            "name": "Python: [Modular_Full] Play Environment",
+            "type": "debugpy",
+            "request": "launch",
+            // "args" : ["--task", "humanoid_full_modular_play", "--num_envs", "4", "--cpu"],
+            "args" : ["--task", "humanoid_full_modular_play", "--num_envs", "3", "--device", "cpu"],
+            // "args" : ["--task", "humanoid_full_modular_play", "--num_envs", "3", "--device", "cpu", "--headless"],
+            // "args" : ["--task", "humanoid_full_modular_play", "--num_envs", "4096", "--headless"],
+            "program": "${workspaceFolder}/scripts/play_modular.py",
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/.vscode/.python.env"
+        },
+
+        {
+            "name": "Python: Sweep",
+            "type": "debugpy",
+            "request": "launch",
+            "justMyCode": true,
+            "args" : ["--task", "humanoid_vanilla", "--num_envs", "4096", "--headless"],
+            // "args" : ["--task", "humanoid_vanilla", "--num_envs", "4096", "--headless", "--disable_logging", "--max_iterations=10"],
+            "program": "${workspaceFolder}/optuna_studies/sweep.py",
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/.vscode/.python.env"
+        },
+
+        {
+            "name": "Python: [Experiment] Play Experiment",
+            "type": "debugpy",
+            "request": "launch",
+            // "args" : ["--num_envs", "9", "--device", "cpu"],
+            // "args" : ["--num_envs", "3600", "--device", "cpu", "--headless"],
+            "args" : ["--num_envs", "3600", "--headless"],
+            "program": "${workspaceFolder}/scripts/experiment.py",
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/.vscode/.python.env"
+        },
+    ]
+}

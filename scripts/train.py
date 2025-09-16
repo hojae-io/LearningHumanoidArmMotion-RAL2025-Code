@@ -59,7 +59,6 @@ from isaaclab.utils.io import dump_pickle, dump_yaml
 from utils import local_code_save_helper
 
 # Import extensions to set up environment tasks
-import extensions.ext_template  # noqa: F401  TODO: import extensions.<your_extension_name>
 import extensions.humanoid  # noqa: F401
 import isaaclab_tasks  # noqa: F401
 
