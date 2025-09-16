@@ -30,6 +30,8 @@ Project Website: [https://hojae-io.github.io/LearningHumanoidArmMotion-RAL2025-W
       <a href="#user-manual">User Manual</a></li>
       <ul>
         <li><a href="#0-generate-cusadi-function-optional">Generate CusADi Function (Optional)</a></li>
+        <li><a href="#1-trian-the-policy-in-isaaclab">Train the policy in IsaacLab</a></li>
+        <li><a href="#2-play-the-policy-in-isaaclab">Play the policy in IsaacLab</a></li>
       </ul>
     <li><a href="#system-info">System Info</a></li>
     <li><a href="#troubleshooting">Troubleshooting</a></li>
@@ -131,6 +133,21 @@ But if you want to generate custom CusADi functions, follow the instructions bel
    It will generate `*.cu` files in `cusadi/codegen`. Now we are ready to use _CusADi_ functions!
 
 ### 1. Train the policy in IsaacLab
+```bash
+conda activate ral2025
+cd LearningHumanoidArmMotion-RAL2025-Code
+python scripts/train_modular.py --task=humanoid_full_modular --headless --max_iterations=2000
+```
+The trained models will be saved in `logs/rsl_rl/` directory.
+
+
+### 2. Play the policy in IsaacLab
+```bash
+python scripts/play_modular.py --task=humanoid_full_modular_play --num_envs=3 --device cpu
+```
+
+You can control velocity command by `L / H / K / J / U / I` keys
+By setting `RECORD=True` in `play_modular.py` and pressing `W` key, you can save recorded videos and plots in `/logs/rsl_rl/[your model]/analysis/` directory.
 
 ### 3. Deploy the policy to robot hardware
 This repository does not include a code stack for deploying a policy to MIT Humanoid hardware.
