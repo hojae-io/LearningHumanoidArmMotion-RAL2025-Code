@@ -142,6 +142,15 @@ GPU: Geforce 3090 / Geforce 4070 Ti
 ## Troubleshooting
 
 1. If you have any issue with `numpy` version conflict, consider downgrading to version 1.23.1 by `pip install numpy==1.23.1`
+2. If you have `ModuleNotFoundError: No module named 'extensions'` error, add `~/anaconda3/envs/ral2025/etc/conda/activate.d/env_vars.sh` with following contents:
+   ```bash
+   export PATH="/opt/openrobots/bin:$PATH"
+   export PKG_CONFIG_PATH="/opt/openrobots/lib/pkgconfig:$PKG_CONFIG_PATH"
+   export LD_LIBRARY_PATH="/opt/openrobots/lib:$LD_LIBRARY_PATH"
+   export PYTHONPATH="$HOME/anaconda3/envs/ral2025/lib/python3.10/site-packages:$HOME/git/LearningHumanoidArmMotion-RAL2025-Code:/opt/openrobots/lib/python3.10/site-packages:$PYTHONPATH"
+   export CMAKE_PREFIX_PATH="/opt/openrobots:$CMAKE_PREFIX_PATH"
+   ```
+
 
 
 ## Acknowledgement
