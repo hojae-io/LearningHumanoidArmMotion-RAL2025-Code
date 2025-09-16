@@ -597,7 +597,7 @@ class RewardsCfg:
         )
         dCAM_xy = RewTerm(
             func=brl_mdp.dCAM_xy_penalty,
-            weight=1e-1,
+            weight=5e-2,
             params={"asset_cfg": SceneEntityCfg("robot")}
         )
         tracking_CAM_reward = RewTerm(

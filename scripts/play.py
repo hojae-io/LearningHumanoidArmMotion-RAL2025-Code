@@ -45,7 +45,6 @@ import carb
 from rsl_rl.runners import OnPolicyRunner
 
 # Import extensions to set up environment tasks
-import extensions.ext_template  # noqa: F401  TODO: import extensions.<your_extension_name>
 import extensions.humanoid  # noqa: F401
 import isaaclab_tasks  # noqa: F401
 from extensions import ISAACLAB_BRL_ROOT_DIR

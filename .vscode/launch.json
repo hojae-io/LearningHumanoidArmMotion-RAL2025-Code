@@ -117,12 +117,15 @@
             "type": "debugpy",
             "request": "launch",
             // "args" : ["--task", "humanoid_full_modular_play", "--num_envs", "4", "--cpu"],
-            "args" : ["--task", "humanoid_full_modular_play", "--num_envs", "3", "--device", "cpu"],
+            "args" : ["--task", "humanoid_full_modular_play", "--num_envs", "1", "--device", "cpu"],
             // "args" : ["--task", "humanoid_full_modular_play", "--num_envs", "3", "--device", "cpu", "--headless"],
             // "args" : ["--task", "humanoid_full_modular_play", "--num_envs", "4096", "--headless"],
             "program": "${workspaceFolder}/scripts/play_modular.py",
             "console": "integratedTerminal",
-            "envFile": "${workspaceFolder}/.vscode/.python.env"
+            "envFile": "${workspaceFolder}/.vscode/.python.env",
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0"
+            }
         },
 
         {

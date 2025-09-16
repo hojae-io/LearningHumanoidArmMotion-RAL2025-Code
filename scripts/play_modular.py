@@ -45,7 +45,6 @@ import carb
 from rsl_rl.runners import ModularOnPolicyRunner
 
 # Import extensions to set up environment tasks
-import extensions.ext_template  # noqa: F401  TODO: import extensions.<your_extension_name>
 import extensions.humanoid  # noqa: F401
 import isaaclab_tasks  # noqa: F401
 from extensions import ISAACLAB_BRL_ROOT_DIR
@@ -160,11 +159,11 @@ if __name__ == "__main__":
     EXPORT_POLICY = True # True, False
     CUSTOM_COMMANDS = False # True, False
     LIVE_PLOT = False # True, False
-    RECORD = False # True, False
+    RECORD = True # True, False
 
     # args_cli.load_files = True # True, False
     # args_cli.load_run = '2025-05-23_00-34-58'
-    # args_cli.checkpoint = 'model_2000.pt'
+    # args_cli.checkpoint = 'model_1000.pt'
     try:
         # run the main execution
         main()
