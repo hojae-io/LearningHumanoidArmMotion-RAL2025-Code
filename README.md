@@ -164,6 +164,24 @@ By pressing `F` key, you can push the robot (_i.e._ apply external perturbation)
 > python scripts/play.py --task=humanoid_vanilla_play --headless --max_iterations=2000
 > python scripts/play.py --task=humanoid_full_vanilla_play --headless --max_iterations=2000
 >  ```
+<br/>
+By training with 2000 iterations, you should be able to see the motions as below:
+<br/>
+<br/>
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="media/walking.gif" width="400px"><br/>
+        Walking Forward / Backward
+      </td>
+      <td align="center">
+        <img src="media/push.gif" width="400px"><br/>
+        Push Recovery
+      </td>
+    </tr>
+  </table>
+</div>
 
 ### 3. Deploy the policy to robot hardware
 This repository does not include a code stack for deploying a policy to MIT Humanoid hardware.
