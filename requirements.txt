@@ -3,4 +3,5 @@ optuna==4.3.0
 optuna-dashboard==0.18.0
 wandb==0.12.21
 pin==3.7.0
-numpy==1.23.0
+# numpy==1.23.1
+seaborn==0.13.2

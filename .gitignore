@@ -1,0 +1,7 @@
+**/__pycache__/
+logs/
+wandb/
+casadi_functions/
+data/
+figures/
+db/
