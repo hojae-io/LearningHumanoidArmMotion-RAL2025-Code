@@ -52,7 +52,7 @@ Project Website: [https://hojae-io.github.io/LearningHumanoidArmMotion-RAL2025-W
    This should set up [IsaacLab](https://github.com/hojae-io/IsaacLab), [cusadi](https://github.com/hojae-io/cusadi), [rsl_rl](https://github.com/hojae-io/rsl_rl) submodules (branch: dev_RAL2025).
 
 3. Go to the [IsaacLab](https://github.com/hojae-io/IsaacLab) directory. <br/>
-   Follow the [instruction](https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/pip_installation.html) to install _IsaacSim_ and _IsaacLab_ anaconda virtual environment. <br/>
+   Follow the [instructions](https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/pip_installation.html) to install _IsaacSim_ and _IsaacLab_ Anaconda virtual environment. <br/>
    ```bash
    cd IsaacLab
    conda create -n ral2025 python=3.10
@@ -111,7 +111,7 @@ Project Website: [https://hojae-io.github.io/LearningHumanoidArmMotion-RAL2025-W
 
 ## User Manual
 
-Activate anaconda virtual environment:
+Activate Anaconda virtual environment:
 ```bash 
 conda activate ral2025
 cd LearningHumanoidArmMotion-RAL2025-Code
@@ -121,16 +121,16 @@ cd LearningHumanoidArmMotion-RAL2025-Code
 Necessary CusADi functions for running this code are already generated. So you don't need to run this section.
 But if you want to generate custom CusADi functions, follow the instructions below.
 
-1. Install CasADi extension of Pinocchio by following the instruction [here](https://stack-of-tasks.github.io/pinocchio/download.html) or by running `conda install pinocchio -c conda-forge`. <br/>
+1. Install the CasADi extension of Pinocchio by following the instructions [here](https://stack-of-tasks.github.io/pinocchio/download.html) or by running `conda install pinocchio -c conda-forge`. <br/>
    You should be able to run `from pinocchio import casadi as cpin` from the script.
 
 2. Run
    ```bash
    python ./extensions/humanoid/dynamics/forward_kinematics.py
    ```
-   It will generate casadi functions in `extensions/humanoid/dynamics/casadi_fns` directory.
+   It will generate CasADi functions in `extensions/humanoid/dynamics/casadi_fns` directory.
 
-3. Copy manually these casadi functions to `cusadi/src/casadi_functions`
+3. Copy manually these CasADi functions to `cusadi/src/casadi_functions`
 4. Run
    ```base
    cd cusadi
@@ -144,7 +144,7 @@ python scripts/train_modular.py --task=humanoid_full_modular --headless --max_it
 ```
 The trained models will be saved in `logs/rsl_rl/` directory. <br/>
 
-> For the single agent controller, run
+> For the single-agent controller, run
 > ```bash
 > python scripts/train.py --task=humanoid_vanilla --headless --max_iterations=2000
 > python scripts/train.py --task=humanoid_full_vanilla --headless --max_iterations=2000
@@ -157,9 +157,9 @@ python scripts/play_modular.py --task=humanoid_full_modular_play --num_envs=3 --
 
 You can control velocity command by `L / H / K / J / U / I` keys. <br/>
 By setting `RECORD=True` in `play_modular.py` and pressing `W` key, you can save recorded videos and plots in `/logs/rsl_rl/[YOUR MODEL]/analysis/` directory. <br/>
-By pressing `F` key, you can push the robot (_i.e._ apply external perturbation). <br/>
+By pressing `F` key, you can push the robot (_i.e.,_ apply external perturbation). <br/>
 
-> For the single agent controller, run
+> For the single-agent controller, run
 > ```bash
 > python scripts/play.py --task=humanoid_vanilla_play --headless --max_iterations=2000
 > python scripts/play.py --task=humanoid_full_vanilla_play --headless --max_iterations=2000
@@ -183,7 +183,7 @@ By training with 2000 iterations, you should be able to see the motions as below
   </table>
 </div>
 
-### 3. Deploy the policy to robot hardware
+### 3. Deploy the policy to the robot hardware
 This repository does not include a code stack for deploying a policy to MIT Humanoid hardware.
 Please check the [Cheetah-Software](https://github.com/mit-biomimetics/Cheetah-Software) for our lab's hardware code stack.
 
@@ -198,8 +198,8 @@ GPU: Geforce 3090 / Geforce 4070 Ti
 
 ## Troubleshooting
 
-1. If you have any issue with `numpy` version conflict, consider downgrading to version 1.23.1 by `pip install numpy==1.23.1`
-2. If you have `ModuleNotFoundError: No module named 'extensions'` error, add `~/anaconda3/envs/ral2025/etc/conda/activate.d/env_vars.sh` with following contents:
+1. If you have any issues with `numpy` version conflict, consider downgrading to version 1.23.1 by `pip install numpy==1.23.1`
+2. If you have `ModuleNotFoundError: No module named 'extensions'` error, add `~/anaconda3/envs/ral2025/etc/conda/activate.d/env_vars.sh` with the following contents:
    ```bash
    export PATH="/opt/openrobots/bin:$PATH"
    export PKG_CONFIG_PATH="/opt/openrobots/lib/pkgconfig:$PKG_CONFIG_PATH"
