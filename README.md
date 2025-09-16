@@ -22,11 +22,15 @@ Project Website: [https://hojae-io.github.io/LearningHumanoidArmMotion-RAL2025-W
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#dependencies">Dependencies</a></li>
         <li><a href="#installation">Installation</a></li>
+        <li><a href="#code-structure">Code Structure</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li>
+      <a href="#user-manual">User Manual</a></li>
+      <ul>
+        <li><a href="#0.-generate-cusadi-function-(optional)">0. Generate CusADi Function (Optional)</a></li>
+      </ul>
     <li><a href="#system-info">System Info</a></li>
     <li><a href="#troubleshooting">Troubleshooting</a></li>
     <li><a href="#acknowledgement">Acknowledgement</a></li>
@@ -125,6 +129,8 @@ But if you want to generate custom CusADi functions, follow the instructions bel
    python run_codegen.py
    ```
    It will generate `*.cu` files in `cusadi/codegen`. Now we are ready to use _CusADi_ functions!
+
+### 1. Train the policy in IsaacLab
 
 ### 3. Deploy the policy to robot hardware
 This repository does not include a code stack for deploying a policy to MIT Humanoid hardware.
